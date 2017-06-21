@@ -1,0 +1,54 @@
+
+<html>
+<head>
+	<style>
+		#catimg{
+		width:300px;
+
+		}
+	</style>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+<h1>Welcome to my Ph.d Page</h1>
+ 
+ 
+<p>This is the first section of my Thesis</p>
+ 
+<p> This is the second section ... </p>
+ 
+ 
+<span> ... and I don't know what I'm doing.</span>
+ 
+ 
+<span> ... no ... really, I don't know.</span>
+ 
+ 
+<div> Hello, how are you?</div>
+<div>I am very well!</div>
+ 
+<div>
+    <div>This one has text ... </div>
+</div>
+<img id="catimg" src="cat.jpg" />
+<button id="catbutton">say hi</button>
+
+<script type="text/javascript">
+	var d3=Plotly.d3;
+
+	var catimage=d3.select("#catimg");
+	var button=d3.select("#catbutton");
+	button.on("hover",function(){
+		console.log("hi");
+	})
+	button.on("click",function(){
+		var width=parseInt(catimage.style("width"));
+		var new_width=(width+30)+"px";
+		catimage.style("width",new_width);
+		console.log("hi");
+
+	})
+</script>
+</body>
+</html>
